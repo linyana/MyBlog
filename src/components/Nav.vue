@@ -1,6 +1,6 @@
 <template>
-  <div id="title">
-     
+  <div id="nav">
+      
   </div>
 </template>
 
@@ -9,5 +9,6 @@
 </script>
 
 <style>
+
 
 </style>

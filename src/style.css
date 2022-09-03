@@ -18,3 +18,9 @@ html {
         url("//at.alicdn.com/wf/webfont/nHM1Jm5mEhGA/iZLe7JxEGpCGmDeUIu2oo.woff") format("woff");
     font-display: swap;
 }
+
+.container {
+    position: relative;
+    width: 1300px;
+    margin: auto;
+}

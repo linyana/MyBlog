@@ -1,5 +1,6 @@
 <template>
     <div id="home">
+        <Title></Title>
         <div class="banner">
             <div class="banner_text">林衍</div>
             <div class="banner_text2">个人博客</div>
@@ -8,6 +9,7 @@
 </template>
 
 <script setup>
+import Title from '@/components/Title.vue';
 </script>
 
 <style scoped>

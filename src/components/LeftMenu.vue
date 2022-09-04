@@ -52,7 +52,7 @@ export default {};
     box-shadow: 0 0 30px rgb(0, 0, 0, 0.5);
     text-shadow: 0 0 3px rgb(0, 0, 0, 0.3);
     color: rgba(56, 54, 54, 0.8);
-    background-color: rgb(255, 255, 255, 0.6);
+    background-color: rgb(255, 255, 255, 0.8);
     backdrop-filter: blur(20px);
 }
 

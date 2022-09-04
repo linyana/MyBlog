@@ -66,7 +66,7 @@ export default {
                     id: 5,
                     name: "Hello blog!",
                     introduce: "Welcome to my blog",
-                    img: "assets/article/Article2.jpg",
+                    img: "assets/article/Article9.jpg",
                     date: "2022年3月18日",
                     reserve: false,
                 },

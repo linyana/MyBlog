@@ -14,27 +14,23 @@
                     <div class="article_disctription">{{article.introduce}}</div>
                 </div>
                 <div class="article_card_left"></div>
-                <div
-                    class="article_card_right"
-                    :style="{ backgroundImage: `url(../../src/assets/article/${article.img})` }"
-                ></div>
+                <div class="article_card_right" :style="{ backgroundImage: `url(${getImageUrl(article.img)})` }"></div>
             </div>
         </div>
     </div>
 </template>
 
 <script setup>
-const GetArticleImgUrl = (name) => {
-    console.log(name);
-    return new URL(`../../src/assets/article/${name}`, import.meta.url).href;
-};
+function getImageUrl(name) {
+    return new URL(`../../src/assets/article/${name}.jpg`, import.meta.url).href;
+}
 
 let articles = [
     {
         id: 0,
         name: "HTML打包工具",
         introduce: "将CSS和JS分离成单独的文件",
-        img: "Article4.jpg",
+        img: "Article4",
         date: "2022年3月19日",
         reserve: false,
     },
@@ -42,7 +38,7 @@ let articles = [
         id: 0,
         name: "暂时性死区问题",
         introduce: "Cannot access 'str' before initialization",
-        img: "Article.jpg",
+        img: "Article",
         date: "2022年3月19日",
         reserve: true,
     },
@@ -50,7 +46,7 @@ let articles = [
         id: 3,
         name: "自定义迭代器",
         introduce: "理解迭代器底层原理",
-        img: "Article8.jpg",
+        img: "Article8",
         date: "2022年3月18日",
         reserve: false,
     },
@@ -58,7 +54,7 @@ let articles = [
         id: 4,
         name: "捕获路由转发的错误",
         introduce: "捕获vue router路由转发的错误,让控制台更美观",
-        img: "Article7.jpg",
+        img: "Article7",
         date: "2022年3月17日",
         reserve: true,
     },
@@ -66,7 +62,7 @@ let articles = [
         id: 5,
         name: "Hello blog!",
         introduce: "Welcome to my blog",
-        img: "Article9.jpg",
+        img: "Article9",
         date: "2022年3月18日",
         reserve: false,
     },

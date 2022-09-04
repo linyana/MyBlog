@@ -5,13 +5,17 @@
             <div class="banner_text">林衍</div>
             <div class="banner_text2">个人博客</div>
         </div>
-        <LeftMenu></LeftMenu>
+        <div class="container flex">
+            <LeftMenu></LeftMenu>
+            <RightMenu></RightMenu>
+        </div>
     </div>
 </template>
 
 <script setup>
 import Title from "@/components/Title.vue";
 import LeftMenu from "@/components/LeftMenu.vue";
+import RightMenu from "@/components/RightMenu.vue";
 </script>
 
 <style scoped>
@@ -36,5 +40,10 @@ import LeftMenu from "@/components/LeftMenu.vue";
     text-align: center;
     font-size: 20px;
     text-shadow: 0 0 10px rgb(0, 0, 0, 0.5);
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
 }
 </style>

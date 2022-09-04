@@ -49,9 +49,11 @@ export default {};
     height: 600px;
     border-radius: 10px;
     transition: top 0.9s ease-out;
-    box-shadow: 0 0 30px rgb(0,0,0,0.5);
-    text-shadow: 0 0 3px rgb(0,0,0,0.3);
+    box-shadow: 0 0 30px rgb(0, 0, 0, 0.5);
+    text-shadow: 0 0 3px rgb(0, 0, 0, 0.3);
     color: rgba(56, 54, 54, 0.8);
+    background-color: rgb(255, 255, 255, 0.6);
+    backdrop-filter: blur(20px);
 }
 
 .individual_label_image {
@@ -73,7 +75,7 @@ export default {};
     border-radius: 60px;
     background-image: url(@/assets/home/User.jpg);
     background-size: 100% 100%;
-    box-shadow: 0 0 20px rgb(0,0,0,0.6);
+    box-shadow: 0 0 20px rgb(0, 0, 0, 0.6);
 }
 
 .individual_label_user_name {
@@ -86,7 +88,7 @@ export default {};
     text-align: center;
     font-size: 2.2em;
     font-weight: 600;
-    text-shadow: 0 0 3px rgb(0,0,0,0.3);
+    text-shadow: 0 0 3px rgb(0, 0, 0, 0.3);
 }
 
 .individual_label_position_image {
@@ -107,7 +109,7 @@ export default {};
     height: 30px;
     text-align: center;
     font-size: 1.3em;
-    text-shadow: 0 0 3px rgb(0,0,0,0.3);
+    text-shadow: 0 0 3px rgb(0, 0, 0, 0.3);
 }
 
 .individual_label_information {
@@ -171,7 +173,7 @@ export default {};
     height: 50px;
 }
 
-.individual_label_contact_line > div{
+.individual_label_contact_line > div {
     cursor: pointer;
     width: 40px;
     height: 40px;

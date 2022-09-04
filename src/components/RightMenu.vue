@@ -16,64 +16,61 @@
                 <div class="article_card_left"></div>
                 <div
                     class="article_card_right"
-                    :style="{ backgroundImage: `url(src/${article.img})` }"
+                    :style="{ backgroundImage: `url(${GetArticleImgUrl(article.img)})` }"
                 ></div>
             </div>
         </div>
     </div>
 </template>
 
-<script>
-import App from "../App.vue";
-export default {
-    components: { App },
-    data() {
-        return {
-            articles: [
-                {
-                    id: 0,
-                    name: "HTML打包工具",
-                    introduce: "将CSS和JS分离成单独的文件",
-                    img: "assets/article/Article4.jpg",
-                    date: "2022年3月19日",
-                    reserve: false,
-                },
-                {
-                    id: 0,
-                    name: "暂时性死区问题",
-                    introduce: "Cannot access 'str' before initialization",
-                    img: "assets/article/Article.jpg",
-                    date: "2022年3月19日",
-                    reserve: true,
-                },
-                {
-                    id: 3,
-                    name: "自定义迭代器",
-                    introduce: "理解迭代器底层原理",
-                    img: "assets/article/Article8.jpg",
-                    date: "2022年3月18日",
-                    reserve: false,
-                },
-                {
-                    id: 4,
-                    name: "捕获路由转发的错误",
-                    introduce: "捕获vue router路由转发的错误,让控制台更美观",
-                    img: "assets/article/Article7.jpg",
-                    date: "2022年3月17日",
-                    reserve: true,
-                },
-                {
-                    id: 5,
-                    name: "Hello blog!",
-                    introduce: "Welcome to my blog",
-                    img: "assets/article/Article9.jpg",
-                    date: "2022年3月18日",
-                    reserve: false,
-                },
-            ],
-        };
-    },
+<script setup>
+
+const GetArticleImgUrl = (name) => {
+    return new URL(`../../src/assets/article/${name}`, import.meta.url).href;
 };
+
+let articles = [
+    {
+        id: 0,
+        name: "HTML打包工具",
+        introduce: "将CSS和JS分离成单独的文件",
+        img: "Article4.jpg",
+        date: "2022年3月19日",
+        reserve: false,
+    },
+    {
+        id: 0,
+        name: "暂时性死区问题",
+        introduce: "Cannot access 'str' before initialization",
+        img: "Article.jpg",
+        date: "2022年3月19日",
+        reserve: true,
+    },
+    {
+        id: 3,
+        name: "自定义迭代器",
+        introduce: "理解迭代器底层原理",
+        img: "Article8.jpg",
+        date: "2022年3月18日",
+        reserve: false,
+    },
+    {
+        id: 4,
+        name: "捕获路由转发的错误",
+        introduce: "捕获vue router路由转发的错误,让控制台更美观",
+        img: "Article7.jpg",
+        date: "2022年3月17日",
+        reserve: true,
+    },
+    {
+        id: 5,
+        name: "Hello blog!",
+        introduce: "Welcome to my blog",
+        img: "Article9.jpg",
+        date: "2022年3月18日",
+        reserve: false,
+    },
+];
 </script>
 
 <style>

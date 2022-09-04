@@ -27,14 +27,14 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 50px;
+    height: 70px;
 }
 
 .nav {
     position: absolute;
     right: 0;
     top: 0;
-    line-height: 50px;
+    line-height: 70px;
     font-size: 25px;
 }
 

@@ -5,19 +5,21 @@
             <div class="banner_text">林衍</div>
             <div class="banner_text2">个人博客</div>
         </div>
+        <LeftMenu></LeftMenu>
     </div>
 </template>
 
 <script setup>
-import Title from '@/components/Title.vue';
+import Title from "@/components/Title.vue";
+import LeftMenu from "@/components/LeftMenu.vue";
 </script>
 
 <style scoped>
 .banner {
-    width: 100vw;
+    position: relative;
+    z-index: 99;
+    width: 100%;
     height: 100vh;
-    background-image: url(@/assets/background/background1.jpg);
-    background-size: 100% 100%;
 }
 
 .banner_text {

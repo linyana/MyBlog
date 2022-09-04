@@ -1,55 +1,23 @@
 <template>
     <div id="RightMenu">
         <div class="article">
-            <div class="article_card">
+            <div
+                class="article_card"
+                :class="{'article_card_reserve':article.reserve}"
+                v-for="article in articles"
+                :key="article.id"
+            >
                 <div class="text">
                     <div class="article_img"></div>
-                    <div class="article_date">2022年3月19日</div>
-                    <div class="article_title">HTML打包工具</div>
-                    <div class="article_disctription">将CSS和JS分离成单独的文件</div>
+                    <div class="article_date">{{article.date}}</div>
+                    <div class="article_title">{{article.name}}</div>
+                    <div class="article_disctription">{{article.introduce}}</div>
                 </div>
                 <div class="article_card_left"></div>
-                <div class="article_card_right"></div>
-            </div>
-            <div class="article_card">
-                <div class="text text_reverse">
-                    <div class="article_img"></div>
-                    <div class="article_date">2022年3月19日</div>
-                    <div class="article_title">暂时性死区问题</div>
-                    <div class="article_disctription">Cannot access 'str' before initialization</div>
-                </div>
-                <div class="article_card_left article_card_left_reverse article_img2"></div>
-                <div class="article_card_right article_card_right_reverse article_img2"></div>
-            </div>
-            <div class="article_card">
-                <div class="text text">
-                    <div class="article_img"></div>
-                    <div class="article_date">2022年3月18日</div>
-                    <div class="article_title">自定义迭代器</div>
-                    <div class="article_disctription">理解迭代器底层原理</div>
-                </div>
-                <div class="article_card_left article_img3"></div>
-                <div class="article_card_right article_img3"></div>
-            </div>
-            <div class="article_card">
-                <div class="text text_reverse">
-                    <div class="article_img"></div>
-                    <div class="article_date">2022年3月17日</div>
-                    <div class="article_title">捕获路由转发的错误</div>
-                    <div class="article_disctription">捕获vue router路由转发的错误，让控制台更美观</div>
-                </div>
-                <div class="article_card_left article_card_left_reverse article_img4"></div>
-                <div class="article_card_right article_card_right_reverse article_img4"></div>
-            </div>
-            <div class="article_card">
-                <div class="text text">
-                    <div class="article_img"></div>
-                    <div class="article_date">2022年3月15日</div>
-                    <div class="article_title">Hello blog!</div>
-                    <div class="article_disctription">Welcome to my blog</div>
-                </div>
-                <div class="article_card_left article_img5"></div>
-                <div class="article_card_right article_img5"></div>
+                <div
+                    class="article_card_right"
+                    :style="{ backgroundImage: `url(src/${article.img})` }"
+                ></div>
             </div>
         </div>
     </div>
@@ -59,6 +27,52 @@
 import App from "../App.vue";
 export default {
     components: { App },
+    data() {
+        return {
+            articles: [
+                {
+                    id: 0,
+                    name: "HTML打包工具",
+                    introduce: "将CSS和JS分离成单独的文件",
+                    img: "assets/article/Article4.jpg",
+                    date: "2022年3月19日",
+                    reserve: false,
+                },
+                {
+                    id: 0,
+                    name: "暂时性死区问题",
+                    introduce: "Cannot access 'str' before initialization",
+                    img: "assets/article/Article.jpg",
+                    date: "2022年3月19日",
+                    reserve: true,
+                },
+                {
+                    id: 3,
+                    name: "自定义迭代器",
+                    introduce: "理解迭代器底层原理",
+                    img: "assets/article/Article8.jpg",
+                    date: "2022年3月18日",
+                    reserve: false,
+                },
+                {
+                    id: 4,
+                    name: "捕获路由转发的错误",
+                    introduce: "捕获vue router路由转发的错误,让控制台更美观",
+                    img: "assets/article/Article7.jpg",
+                    date: "2022年3月17日",
+                    reserve: true,
+                },
+                {
+                    id: 5,
+                    name: "Hello blog!",
+                    introduce: "Welcome to my blog",
+                    img: "assets/article/Article2.jpg",
+                    date: "2022年3月18日",
+                    reserve: false,
+                },
+            ],
+        };
+    },
 };
 </script>
 
@@ -85,11 +99,10 @@ export default {
     top: 0;
     width: 700px;
     height: 100%;
-    background-image: url(@/assets/article/Article4.jpg);
     background-size: 100% 180%;
     background-position: 0 30%;
-    -webkit-filter: blur(0.8em);
-    filter: blur(0.8em);
+    backdrop-filter: blur(20px);
+    background-color: rgb(255, 255, 255, 0.8);
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
@@ -100,7 +113,6 @@ export default {
     top: -0.5%;
     width: 350px;
     height: 101%;
-    background-image: url(@/assets/article/Article4.jpg);
     background-size: 120% 120%;
     background-position: 50% 50%;
     border-top-right-radius: 20px;
@@ -112,8 +124,8 @@ export default {
 .text {
     position: relative;
     font-weight: 700;
-    color: rgb(255, 225, 255);
-    text-shadow: 0 0 2px rgb(0, 0, 0, 0.5);
+    color: rgba(78, 74, 74, 0.5);
+    text-shadow: 0 0 2px rgb(0, 0, 0, 0.3);
 }
 
 .article_img {
@@ -123,7 +135,7 @@ export default {
     top: 50px;
     width: 25px;
     height: 25px;
-    background-image: urL(/src/Images/Date.png);
+    background-image: url(@/assets/home/Date.png);
     background-size: 100% 100%;
 }
 
@@ -152,38 +164,22 @@ export default {
 }
 
 /* reserve */
-.text_reverse {
+.article_card_reserve .text {
     margin-left: 300px;
 }
 
-.article .article_card .article_card_left_reverse {
+.article .article_card_reserve .article_card_left {
     position: absolute;
     left: 260px;
     top: 0;
 }
 
-.article .article_card .article_card_right_reverse {
+.article .article_card_reserve .article_card_right {
     position: absolute;
     left: 0;
     top: -0.5%;
-    -webkit-clip-path: polygon(0 0,80% 0,100% 100%,0 100%);
-    clip-path: polygon(0 0,80% 0,100% 100%,0 100%);
+    -webkit-clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
     border-bottom-right-radius: 0;
-}
-
-.article .article_card .article_img2 {
-    background-image: url(@/assets/article/Article.jpg);
-}
-
-.article .article_card .article_img3 {
-    background-image: url(@/assets/article/Article3.jpg);
-}
-
-.article .article_card .article_img4 {
-    background-image: url(@/assets/article/Article6.jpg);
-}
-
-.article .article_card .article_img5 {
-    background-image: url(@/assets/article/Article5.jpg);
 }
 </style>

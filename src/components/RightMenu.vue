@@ -16,7 +16,7 @@
                 <div class="article_card_left"></div>
                 <div
                     class="article_card_right"
-                    :style="{ backgroundImage: `url(${GetArticleImgUrl(article.img)})` }"
+                    :style="{ backgroundImage: `url(../../src/assets/article/${article.img})` }"
                 ></div>
             </div>
         </div>

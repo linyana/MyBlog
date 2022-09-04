@@ -14,23 +14,19 @@
                     <div class="article_disctription">{{article.introduce}}</div>
                 </div>
                 <div class="article_card_left"></div>
-                <div class="article_card_right" :style="{ backgroundImage: `url(${getImageUrl(article.img)})` }"></div>
+                <div class="article_card_right" :class="article.class"></div>
             </div>
         </div>
     </div>
 </template>
 
 <script setup>
-function getImageUrl(name) {
-    return new URL(`../../src/assets/article/${name}.jpg`, import.meta.url).href;
-}
-
 let articles = [
     {
         id: 0,
         name: "HTML打包工具",
         introduce: "将CSS和JS分离成单独的文件",
-        img: "Article4",
+        class: "article_img4",
         date: "2022年3月19日",
         reserve: false,
     },
@@ -38,7 +34,7 @@ let articles = [
         id: 0,
         name: "暂时性死区问题",
         introduce: "Cannot access 'str' before initialization",
-        img: "Article",
+        class: "article_img1",
         date: "2022年3月19日",
         reserve: true,
     },
@@ -46,7 +42,7 @@ let articles = [
         id: 3,
         name: "自定义迭代器",
         introduce: "理解迭代器底层原理",
-        img: "Article8",
+        class: "article_img7",
         date: "2022年3月18日",
         reserve: false,
     },
@@ -54,7 +50,7 @@ let articles = [
         id: 4,
         name: "捕获路由转发的错误",
         introduce: "捕获vue router路由转发的错误,让控制台更美观",
-        img: "Article7",
+        class: "article_img8",
         date: "2022年3月17日",
         reserve: true,
     },
@@ -62,7 +58,7 @@ let articles = [
         id: 5,
         name: "Hello blog!",
         introduce: "Welcome to my blog",
-        img: "Article9",
+        class: "article_img9",
         date: "2022年3月18日",
         reserve: false,
     },
@@ -72,6 +68,42 @@ let articles = [
 <style>
 #RightMenu {
     width: 920px;
+}
+
+.article_img1 {
+    background-image: url(@/assets/article/Article.jpg);
+}
+
+.article_img2 {
+    background-image: url(@/assets/article/Article2.jpg);
+}
+
+.article_img3 {
+    background-image: url(@/assets/article/Article3.jpg);
+}
+
+.article_img4 {
+    background-image: url(@/assets/article/Article4.jpg);
+}
+
+.article_img5 {
+    background-image: url(@/assets/article/Article5.jpg);
+}
+
+.article_img6 {
+    background-image: url(@/assets/article/Article6.jpg);
+}
+
+.article_img7 {
+    background-image: url(@/assets/article/Article7.jpg);
+}
+
+.article_img8 {
+    background-image: url(@/assets/article/Article8.jpg);
+}
+
+.article_img9 {
+    background-image: url(@/assets/article/Article9.jpg);
 }
 
 .article .article_card {

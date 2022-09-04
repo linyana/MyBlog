@@ -116,6 +116,7 @@ let articles = [
     border-radius: 20px;
     transition: margin-left 1s ease-out;
     box-shadow: 0px 0 20px rgb(0, 0, 0, 0.3);
+    transition: all 0.8s;
 }
 
 .article .article_card .article_card_left {
@@ -144,6 +145,7 @@ let articles = [
     border-bottom-right-radius: 20px;
     -webkit-clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
     clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
+    transition: all 0.8s;
 }
 
 .text {
@@ -207,4 +209,13 @@ let articles = [
     clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
     border-bottom-right-radius: 0;
 }
+
+.article_card_right:hover {
+    transform: scale(1.05);
+}
+
+.article_card:hover {
+    box-shadow: 0 0 20px rgba(0,0,0,0.7);
+}
+
 </style>

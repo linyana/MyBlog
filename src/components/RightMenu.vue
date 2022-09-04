@@ -24,8 +24,8 @@
 </template>
 
 <script setup>
-
 const GetArticleImgUrl = (name) => {
+    console.log(name);
     return new URL(`../../src/assets/article/${name}`, import.meta.url).href;
 };
 

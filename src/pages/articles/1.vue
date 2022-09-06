@@ -5,8 +5,7 @@
 <script setup>
 import { ref } from "vue";
 import { html } from "@/assets/article/1.md";
-import "@/assets/article/md.css";
-import "@/assets/article/css/github-markdown-light.css";
+import "@/assets/article/css/md.css";
 
 const markdownhtml = ref(html);
 </script>

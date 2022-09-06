@@ -71,39 +71,39 @@ let articles = [
 }
 
 .article_img1 {
-    background-image: url(@/assets/article/Article.jpg);
+    background-image: url(@/assets/images/article/Article.jpg);
 }
 
 .article_img2 {
-    background-image: url(@/assets/article/Article2.jpg);
+    background-image: url(@/assets/images/article/Article2.jpg);
 }
 
 .article_img3 {
-    background-image: url(@/assets/article/Article3.jpg);
+    background-image: url(@/assets/images/article/Article3.jpg);
 }
 
 .article_img4 {
-    background-image: url(@/assets/article/Article4.jpg);
+    background-image: url(@/assets/images/article/Article4.jpg);
 }
 
 .article_img5 {
-    background-image: url(@/assets/article/Article5.jpg);
+    background-image: url(@/assets/images/article/Article5.jpg);
 }
 
 .article_img6 {
-    background-image: url(@/assets/article/Article6.jpg);
+    background-image: url(@/assets/images/article/Article6.jpg);
 }
 
 .article_img7 {
-    background-image: url(@/assets/article/Article7.jpg);
+    background-image: url(@/assets/images/article/Article7.jpg);
 }
 
 .article_img8 {
-    background-image: url(@/assets/article/Article8.jpg);
+    background-image: url(@/assets/images/article/Article8.jpg);
 }
 
 .article_img9 {
-    background-image: url(@/assets/article/Article9.jpg);
+    background-image: url(@/assets/images/article/Article9.jpg);
 }
 
 .article .article_card {

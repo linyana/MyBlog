@@ -27,7 +27,7 @@ import RightMenu from "@/components/RightMenu.vue";
     top: 0;
     height: 100vh;
     width: 100vw;
-    background-image: url(@/assets/background/background1.jpg);
+    background-image: url("https://s2.loli.net/2022/09/07/ExTiFlG5B8OCovA.webp");
     background-size: 100% 100%;
 }
 

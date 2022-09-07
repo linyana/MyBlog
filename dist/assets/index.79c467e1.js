@@ -23,7 +23,7 @@ node\u5B89\u88C5\u5730\u5740\u70B9\u51FB\u8FD9\u4E2A\u5730\u5740\u7136\u540E\u5B
 </li>
 </ul>
 <h2>\u4EE3\u7801\u5C55\u793A</h2>
-<pre><code class="language-java">const fs = require('fs')
+<pre><code class="language-javascript">const fs = require('fs')
 const path = require('path')
  
 // please enter the file name which you want to change

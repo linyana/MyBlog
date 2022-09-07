@@ -77,6 +77,7 @@ let articles = [
     margin: 30px 0;
     display: flex;
     cursor: pointer;
+    cursor: url(@/assets/cur/x2.cur), auto !important;
 }
 
 .article_img {

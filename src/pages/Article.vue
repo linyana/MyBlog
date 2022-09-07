@@ -22,7 +22,7 @@ import Title from "@/components/Title.vue";
 .banner {
     width: 100%;
     height: 400px;
-    background: url("@/assets/background/2.gif") center center / cover no-repeat;
+    background: url("https://s2.loli.net/2022/09/07/p5ezVoQYwk1BXJ6.gif") center center / cover no-repeat;
 }
 
 .banner::before {

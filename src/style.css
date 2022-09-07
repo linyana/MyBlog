@@ -8,6 +8,15 @@ body,
 html {
     width: 100%;
     height: 100%;
+    cursor: url(@/assets/cur/x1.cur), auto;
+}
+
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled),
+a,
+button:not(:disabled) {
+    cursor: url(@/assets/cur/x2.cur), auto !important;
 }
 
 @font-face {

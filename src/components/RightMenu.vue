@@ -117,6 +117,7 @@ const ToTarget = (target)=>{
 }
 
 .article .article_card {
+    cursor: url(@/assets/cur/x2.cur), auto !important;
     cursor: pointer;
     position: relative;
     margin-bottom: 30px;

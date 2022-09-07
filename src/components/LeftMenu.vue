@@ -79,6 +79,7 @@ export default {};
 }
 
 .individual_label_user_name {
+    cursor: url(@/assets/cur/x2.cur), auto !important;
     cursor: pointer;
     position: absolute;
     top: 250px;
@@ -127,6 +128,7 @@ export default {};
 }
 
 .individual_label_information_box_name {
+    cursor: url(@/assets/cur/x2.cur), auto !important;
     cursor: pointer;
     position: absolute;
     top: 2px;
@@ -138,6 +140,7 @@ export default {};
 }
 
 .individual_label_information_box_number {
+    cursor: url(@/assets/cur/x2.cur), auto !important;
     cursor: pointer;
     position: absolute;
     top: 35px;
@@ -149,6 +152,7 @@ export default {};
 }
 
 .individual_label_contact {
+    cursor: url(@/assets/cur/x2.cur), auto !important;
     cursor: pointer;
     position: absolute;
     top: 450px;
@@ -174,6 +178,7 @@ export default {};
 }
 
 .individual_label_contact_line > div {
+    cursor: url(@/assets/cur/x2.cur), auto !important;
     cursor: pointer;
     width: 40px;
     height: 40px;

@@ -28,15 +28,15 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 60px;
+    height: 50px;
 }
 
 .nav {
     position: absolute;
     right: 0;
     top: 0;
-    line-height: 60px;
-    font-size: 23px;
+    line-height: 50px;
+    font-size: 20px;
 }
 
 ul {

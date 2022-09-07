@@ -6,6 +6,7 @@
                 :class="{'article_card_reserve':article.reserve}"
                 v-for="article in articles"
                 :key="article.id"
+                @click="ToTarget(article.src)"
             >
                 <div class="text">
                     <div class="article_img"></div>
@@ -21,6 +22,8 @@
 </template>
 
 <script setup>
+import { useRouter } from 'vue-router'
+
 let articles = [
     {
         id: 0,
@@ -28,6 +31,7 @@ let articles = [
         introduce: "将CSS和JS分离成单独的文件",
         class: "article_img4",
         date: "2022年3月19日",
+        src: "/article/1",
         reserve: false,
     },
     {
@@ -63,6 +67,12 @@ let articles = [
         reserve: false,
     },
 ];
+
+// router
+const router = useRouter()
+const ToTarget = (target)=>{
+    router.push(target)
+}
 </script>
 
 <style>

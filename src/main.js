@@ -1,16 +1,10 @@
 import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue';
-import * as VueRouter from 'vue-router'
-import routes from '@/route/index.js'
+import router from '@/route/index.js'
 
 const app = createApp(App);
 
-// 路由
-const router = VueRouter.createRouter({
-    history: VueRouter.createWebHashHistory(),
-    routes,
-})
 
 // markdown样式
 

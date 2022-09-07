@@ -8,14 +8,30 @@ h1 {
     line-height: 100px;
 }
 
+p {
+    text-indent: 2em;
+}
+
+p,ul {
+    margin: 20px 0;
+}
+
 h2 {
-    line-height: 60px;
+    border-left: 5px solid #ff9b53;
+    line-height: 43px;
+    text-indent: 1em;
+    background-color: rgb(253, 230, 217);
+    margin: 10px 0;
 }
 
 li {
     line-height: 30px;
-    margin: 20px 0;
     margin-left: 20px;
+}
+
+li p {
+    margin: 10px 0;
+    text-indent: 0;
 }
 
 .hljs {
@@ -37,7 +53,7 @@ pre {
     text-align: left;
     background: #21252b;
     box-shadow: 0 10px 30px 0 rgb(0 0 0 / 40%);
-    margin: 20px 0;
+    margin: 40px 0;
 }
 
 pre::before {

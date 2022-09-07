@@ -4,14 +4,32 @@
 
 h1 {
     text-align: center;
-    font-size: 50px;
+    font-size: 40px;
     line-height: 100px;
+}
+
+h2 {
+    line-height: 60px;
+}
+
+li {
+    line-height: 30px;
+    margin: 20px 0;
+    margin-left: 20px;
+}
+
+.hljs {
+    line-height: 25px;
+}
+
+blockquote {
+    line-height: 30px;
 }
 
 pre {
     position: relative;
     display: block;
-    width: 700px;
+    width: 100%;
     padding: 30px 5px 2px;
     border-radius: 5px;
     overflow-x: hidden;

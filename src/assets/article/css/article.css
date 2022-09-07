@@ -1,0 +1,24 @@
+.right_content>div {
+    width: 230px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 50px 0;
+    box-shadow: 0 0 8px rgb(0, 0, 0, 0.1);
+    padding: 40px;
+}
+
+.left_content {
+    width: 850px;
+    padding: 60px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 50px 0;
+    box-shadow: 0 0 8px rgb(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.5rem;
+    color: rgb(78, 77, 77);
+}

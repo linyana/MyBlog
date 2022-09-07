@@ -1,3 +1,13 @@
+* {
+    color: rgb(78, 77, 77);
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    line-height: 100px;
+}
+
 pre {
     position: relative;
     display: block;
@@ -92,4 +102,3 @@ pre::before {
     border-radius: 3px;
     cursor: pointer;
 }
-

@@ -5,10 +5,7 @@
             <div class="banner_name">林衍</div>
         </div>
         <div class="content">
-            <div class="article_content">
-                <router-view></router-view>
-            </div>
-            <div class="introduce_content"></div>
+            <router-view></router-view>
         </div>
     </div>
 </template>
@@ -25,7 +22,7 @@ import Title from "@/components/Title.vue";
 .banner {
     width: 100%;
     height: 400px;
-    background: url(@/assets/background/2.gif) center center / cover no-repeat;
+    background: url("@/assets/background/2.gif") center center / cover no-repeat;
 }
 
 .banner::before {
@@ -56,12 +53,4 @@ import Title from "@/components/Title.vue";
     margin: auto;
 }
 
-.article_content {
-    width: 800px;
-    padding: 60px;
-    background-color: #fff;
-    border-radius: 10px;
-    margin: 50px 0;
-    box-shadow: 0 0 8px rgb(0, 0, 0, 0.1);
-}
 </style>

@@ -75,7 +75,7 @@ const ToTarget = (target)=>{
 }
 </script>
 
-<style>
+<style scoped>
 #RightMenu {
     width: 920px;
 }

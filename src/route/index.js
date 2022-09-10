@@ -2,6 +2,7 @@ import * as VueRouter from 'vue-router'
 import Home from '@/pages/Home.vue';
 import Article from '@/pages/Article.vue';
 import A1 from '@/pages/articles/1.vue';
+import A2 from '@/pages/articles/2.vue';
 
 const routes = [
     {
@@ -15,6 +16,10 @@ const routes = [
             {
                 path: '1',
                 component: A1,
+            },
+            {
+                path: '2',
+                component: A2,
             }
         ]
     }

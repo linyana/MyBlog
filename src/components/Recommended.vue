@@ -41,6 +41,7 @@ let articles = [
         introduce: "Cannot access 'str' before initialization",
         class: "article_img1",
         date: "2022年3月19日",
+        src: "/article/2",
         reserve: true,
     },
     {

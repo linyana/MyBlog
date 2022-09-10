@@ -22,7 +22,7 @@
 </template>
 
 <script setup>
-import { useRouter } from 'vue-router'
+import { useRouter } from "vue-router";
 
 let articles = [
     {
@@ -40,6 +40,7 @@ let articles = [
         introduce: "Cannot access 'str' before initialization",
         class: "article_img1",
         date: "2022年3月19日",
+        src: "/article/2",
         reserve: true,
     },
     {
@@ -69,10 +70,10 @@ let articles = [
 ];
 
 // router
-const router = useRouter()
-const ToTarget = (target)=>{
-    router.push(target)
-}
+const router = useRouter();
+const ToTarget = (target) => {
+    router.push(target);
+};
 </script>
 
 <style scoped>
@@ -226,7 +227,6 @@ const ToTarget = (target)=>{
 }
 
 .article_card:hover {
-    box-shadow: 0 0 20px rgba(0,0,0,0.7);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
 }
-
 </style>

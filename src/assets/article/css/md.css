@@ -12,7 +12,8 @@ p {
     text-indent: 2em;
 }
 
-p,ul {
+p,
+ul {
     margin: 20px 0;
 }
 
@@ -41,6 +42,8 @@ li p {
 blockquote {
     line-height: 30px;
 }
+
+/* 代码样式 */
 
 pre {
     position: relative;
@@ -72,6 +75,30 @@ pre::before {
     border-radius: 16px;
     box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
     content: attr(codetype);
+}
+
+.hljs {
+    color: #78c8f0 !important;
+}
+
+span.hljs-keyword {
+    color: #ebd232;
+}
+
+span.hljs-built_in {
+    color: #78c8f0;
+}
+
+span.hljs-title {
+    color: #a677b4;
+}
+
+span.hljs-variable {
+    color: #78c8f0;
+}
+
+span.hljs-params {
+    color: #aa8caf;
 }
 
 /* 滚动条 */

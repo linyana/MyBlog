@@ -101,6 +101,18 @@ span.hljs-params {
     color: #aa8caf;
 }
 
+span.hljs-selector-tag {
+    color: #ebd232;
+}
+
+span.hljs-property {
+    color: white;
+}
+
+span.hljs-comment {
+    color: rgb(90, 158, 69);
+}
+
 /* 滚动条 */
 :deep(.hljs) {
     overflow-x: auto;

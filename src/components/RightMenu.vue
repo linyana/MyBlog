@@ -49,6 +49,7 @@ let articles = [
         introduce: "理解迭代器底层原理",
         class: "article_img7",
         date: "2022年3月18日",
+        src: "/article/3",
         reserve: false,
     },
     {
@@ -57,6 +58,7 @@ let articles = [
         introduce: "捕获vue router路由转发的错误,让控制台更美观",
         class: "article_img8",
         date: "2022年3月17日",
+        src: "/article/4",
         reserve: true,
     },
     {
@@ -65,6 +67,7 @@ let articles = [
         introduce: "Welcome to my blog",
         class: "article_img9",
         date: "2022年3月18日",
+        src: "/article/5",
         reserve: false,
     },
 ];

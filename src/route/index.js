@@ -3,6 +3,8 @@ import Home from '@/pages/Home.vue';
 import Article from '@/pages/Article.vue';
 import A1 from '@/pages/articles/1.vue';
 import A2 from '@/pages/articles/2.vue';
+import A3 from '@/pages/articles/3.vue';
+import A4 from '@/pages/articles/4.vue';
 
 const routes = [
     {
@@ -20,6 +22,14 @@ const routes = [
             {
                 path: '2',
                 component: A2,
+            },
+            {
+                path: '3',
+                component: A3,
+            },
+            {
+                path: '4',
+                component: A4,
             }
         ]
     }

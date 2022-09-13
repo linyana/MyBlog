@@ -86,7 +86,110 @@ if(a){
 <p>\u5728\u5F53\u524D\u5757\u4F5C\u7528\u57DF\u4E2D\u5B58\u5728a\u4F7F\u7528let/const\u58F0\u660E\u7684\u60C5\u51B5\u4E0B\uFF0C\u7ED9a\u8D4B\u503C10\u65F6\uFF0C\u53EA\u4F1A\u5728\u5F53\u524D\u4F5C\u7528\u57DF\u627E\u53D8\u91CFa,\u800C\u8FD9\u65F6\uFF0C\u8FD8\u672A\u5230\u58F0\u660E\u65F6\u5019\uFF0C\u6240\u4EE5\u63A7\u5236\u53F0Error:Cannot access 'a' before initialization</p>
 </blockquote>
 `,Nf={class:"left_content"},Cf=["innerHTML"],Of={class:"right_content"},If=ie("div",{class:"menu"},[ie("div",{class:"title"},"\u76EE\u5F55")],-1),Af={__name:"2",setup(t){const e=on(Rf);return(n,r)=>{const a=qn("highlight");return xe(),Pe(he,null,[ie("div",Nf,[Yn(ie("article",{innerHTML:e.value},null,8,Cf),[[a]])]),ie("div",Of,[If,Ce($n)])],64)}}},vf=`<h1>\u81EA\u5B9A\u4E49\u8FED\u4EE3\u5668</h1>
-<h2>\u7406\u89E3\u8FED\u4EE3\u5668\u5E95\u5C42\u539F\u7406</h2>
+<h2>\u4EC0\u4E48\u662F\u8FED\u4EE3</h2>
+<blockquote>
+<p>\u6700\u7B80\u5355\u7684\u8FED\u4EE3\u5C31\u662F\u5FAA\u73AF\u4F8B\u5982\uFF1A</p>
+</blockquote>
+<pre><code class="language-javascript">    for(let i = 0;i &lt;= 5;i++){
+        console.log(i);
+    }
+</code></pre>
+<blockquote>
+<p>\u5FAA\u73AF\u662F\u8FED\u4EE3\u7684\u57FA\u7840\uFF0C\u56E0\u4E3A\u5FAA\u73AF\u53EF\u4EE5\u6307\u5B9A\u5FAA\u73AF\u7684\u6B21\u6570\u548C\u6BCF\u6B21\u5FAA\u73AF\u9700\u8981\u6267\u884C\u7684\u5185\u5BB9\u3002</p>
+</blockquote>
+<h2>\u53EF\u8FED\u4EE3\u534F\u8BAE</h2>
+<blockquote>
+<p>\u53EF\u8FED\u4EE3\u534F\u8BAE\u5141\u8BB8 JavaScript \u5BF9\u8C61\u5B9A\u4E49\u6216\u5B9A\u5236\u5B83\u4EEC\u7684\u8FED\u4EE3\u884C\u4E3A\u3002</p>
+</blockquote>
+<h3>iterator\u65B9\u6CD5</h3>
+<blockquote>
+<p>\u8981\u6210\u4E3A\u53EF\u8FED\u4EE3\u5BF9\u8C61\uFF0C\u8FD9\u4E2A\u5BF9\u8C61\u5FC5\u987B\u5B9E\u73B0 iterator \u65B9\u6CD5\u3002\u8FD9\u610F\u5473\u7740\u8FD9\u4E2A\u5BF9\u8C61\uFF08\u6216\u8005\u5B83\u539F\u578B\u94FE\u4E0A\u7684\u67D0\u4E2A\u5BF9\u8C61\uFF09\u5FC5\u987B\u6709\u4E00\u4E2A\u952E\u4E3A iterator \u7684\u5C5E\u6027\uFF0C\u53EF\u901A\u8FC7\u5E38\u91CF Symbol.iterator \u8BBF\u95EE\u8BE5\u5C5E\u6027\u3002</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>\u5C5E\u6027</th>
+<th>\u503C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[Symbol.iterator]</td>
+<td>\u4E00\u4E2A\u65E0\u53C2\u6570\u7684\u51FD\u6570\uFF0C\u5176\u8FD4\u56DE\u503C\u4E3A\u4E00\u4E2A\u7B26\u5408\u8FED\u4EE3\u5668\u534F\u8BAE\u7684\u5BF9\u8C61\u3002</td>
+</tr>
+</tbody>
+</table>
+<h3>next()</h3>
+<blockquote>
+<p>\u8FED\u4EE3\u5668\u4F7F\u7528next()\u65B9\u6CD5\u6765\u904D\u5386\u53EF\u8FED\u4EE3\u5BF9\u8C61\uFF0C\u6BCF\u6B21\u6210\u529F\u8C03\u7528next()\u65F6\u90FD\u4F1A\u8FD4\u56DE\u4E00\u4E2AIteratorResult\u5BF9\u8C61\uFF0C\u5176\u4E2D\u5305\u542B\u4E86\u8FED\u4EE3\u5668\u8FD4\u56DE\u7684\u4E0B\u4E00\u4E2A\u503C\u3002</p>
+</blockquote>
+<blockquote>
+<p>next()\u8FD4\u56DE\u7684IteratorResult\u5305\u542B\u4E86\u4E24\u4E2A\u5C5E\u6027\uFF1Adone\uFF0Cvalue\u3002</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>\u5C5E\u6027</th>
+<th>\u7C7B\u578B</th>
+<th>\u503C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value</td>
+<td>any</td>
+<td>\u53EF\u8FED\u4EE3\u5BF9\u8C61\u7684\u4E0B\u4E00\u4E2A\u503C\uFF0C\u6CA1\u6709\u7684\u8BDD\u4E3Aundefined</td>
+</tr>
+<tr>
+<td>done</td>
+<td>boolean</td>
+<td>\u7528\u6765\u5224\u65AD\u662F\u5426\u8FDB\u884C\u4E0B\u4E00\u6B21next()</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-javascript">let arr = ['1','2'];
+// \u5229\u7528iterator\u63A5\u53E3\u751F\u6210\u8FED\u4EE3\u5668\u5BF9\u8C61
+let iter = arr[Symbol.iterator]();
+console.log(iter) // Object [Array Iterator] {}
+// \u5F00\u59CB\u8FED\u4EE3
+console.log(iter.next());//{ value: '1', done: false }
+console.log(iter.next());//{ value: '2', done: false }
+//\u8D85\u51FA\u6570\u7EC4\u7684\u957F\u5EA6\uFF0C\u4E3A\u7A7A\u6307\u9488\uFF0Cdone\u5C5E\u6027\u4E3A true
+console.log(iter.next());//{ value: undefined, done: true }
+console.log(iter.next());//{ value: undefined, done: true }
+</code></pre>
+<blockquote>
+<p>\u8FD9\u91CC\u6211\u4EEC\u53EF\u4EE5\u770B\u5230\u5728done\u4E3Atrue\u4E4B\u540E\uFF0C\u6BCF\u6B21\u8C03\u7528next()\u5C31\u4E00\u76F4\u8FD4\u56DE\u540C\u6837\u7684\u503C\u4E86\u3002</p>
+</blockquote>
+<h3>\u4E24\u4E2A\u4E0D\u540C\u7684\u8FED\u4EE3\u5668\u4E4B\u95F4\u4F1A\u76F8\u4E92\u5F71\u54CD\u5417</h3>
+<blockquote>
+<p>\u7B54\u6848\u662F\u4E0D\u4F1A\uFF0C\u4E0D\u540C\u7684\u8FED\u4EE3\u5668\u4E4B\u95F4\u6CA1\u6709\u8054\u7CFB\uFF0C\u4ED6\u4EEC\u4F1A\u72EC\u7ACB\u5730\u904D\u5386\u53EF\u8FED\u4EE3\u5BF9\u8C61\u3002</p>
+</blockquote>
+<pre><code class="language-javascript">let arr = ['1','2'];
+let iter1 = arr[Symbol.iterator]();
+let iter2 = arr[Symbol.iterator]();
+// \u5F00\u59CB\u8FED\u4EE3
+console.log(iter1.next());//{ value: '1', done: false }
+console.log(iter2.next());//{ value: '1', done: false }
+console.log(iter1.next());//{ value: '2', done: false }
+console.log(iter2.next());//{ value: '2', done: false }
+</code></pre>
+<h3>\u5982\u679C\u5728\u8FED\u4EE3\u8FC7\u7A0B\u4E2D\u6DFB\u52A0\u65B0\u7684\u904D\u5386\u5BF9\u8C61\u4F1A\u8FDB\u884C\u904D\u5386\u5417</h3>
+<blockquote>
+<p>\u4F1A\u7684\uFF0C\u5982\u679C\u53EF\u8FED\u4EE3\u5BF9\u8C61\u5728\u8FED\u4EE3\u671F\u95F4\u88AB\u4FEE\u6539\u4E86\uFF0C\u90A3\u4E48\u8FED\u4EE3\u5668\u7684\u8FED\u4EE3\u8FC7\u7A0B\u4E5F\u4F1A\u8FDB\u884C\u76F8\u5E94\u7684\u6539\u53D8\u3002</p>
+</blockquote>
+<pre><code class="language-javascript">let arr = ['1','2'];
+let iter = arr[Symbol.iterator]();
+//\u5F00\u59CB\u8FED\u4EE3
+console.log(iter.next());//{ value:'1', done:false }
+console.log(iter.next());//{ value:'2', done:false }
+arr.push('3');
+console.log(iter.next());
+</code></pre>
+<blockquote>
+<p>\u8FD9\u91CC\u9700\u8981\u6CE8\u610F\uFF0C\u5982\u679C\u5728push3\u4E4B\u524D\u518D\u6267\u884C\u4E00\u6B21next()\u7684\u8BDDdone\u4F1A\u53D8\u4E3Ature,\u8FD9\u4F1A\u5BFC\u81F4\u4E4B\u540E\u7684\u8F93\u51FA\u90FD\u662F{ value: undefined, done: true }\uFF0C\u4ECE\u800C\u65E0\u6CD5\u8FED\u4EE3\u51FA3\u3002</p>
+</blockquote>
+<h2>\u81EA\u5B9A\u4E49\u8FED\u4EE3\u5668\u7684\u5B9E\u73B0</h2>
 <pre><code class="language-javascript">class Counter {
     constructor(limit){
         this.limit = limit;

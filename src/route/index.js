@@ -5,6 +5,7 @@ import A1 from '@/pages/articles/1.vue';
 import A2 from '@/pages/articles/2.vue';
 import A3 from '@/pages/articles/3.vue';
 import A4 from '@/pages/articles/4.vue';
+import A0 from '@/pages/articles/0.vue';
 
 const routes = [
     {
@@ -15,6 +16,10 @@ const routes = [
         path: '/article',
         component: Article,
         children: [
+            {
+                path: '0',
+                component: A0,
+            },
             {
                 path: '1',
                 component: A1,

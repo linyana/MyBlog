@@ -28,14 +28,16 @@
             <div class="individual_label_contact_line">
                 <div class="individual_label_contact_line_QQ"></div>
                 <div class="individual_label_contact_line_Wechat"></div>
-                <div class="individual_label_contact_line_Github"></div>
+                <div @click="Opentarget('https://github.com/linyana')" class="individual_label_contact_line_Github"></div>
             </div>
         </div>
     </div>
 </template>
 
-<script>
-export default {};
+<script setup>
+const Opentarget = (target) => {
+     window.open(target);
+};
 </script>
 
 <style>

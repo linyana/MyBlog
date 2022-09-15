@@ -1,5 +1,5 @@
 <template>
-    <div id="title">
+    <div id="title" :class="titleClass">
         <div class="container">
             <div class="nav">
                 <ul>
@@ -19,6 +19,21 @@
 </template>
 
 <script setup>
+import { ref } from "vue";
+
+let titleClass = ref("");
+
+document.addEventListener("scroll", () => {
+    if (
+        Math.floor(
+            document.documentElement.scrollTop || document.body.scrollTop
+        ) >= document.documentElement.clientHeight
+    ) {
+        titleClass.value = "titleTrue";
+    } else {
+        titleClass.value = "titleFalse";
+    }
+});
 </script>
 
 <style scoped>
@@ -29,6 +44,16 @@
     left: 0;
     width: 100%;
     height: 50px;
+    transition: all 0.8s;
+}
+
+.titleTrue {
+    background-color: rgba(226, 229, 229);
+    color: black!important;
+}
+
+.titleFalse {
+    background-color: transparent;
 }
 
 .nav {
@@ -36,10 +61,11 @@
     right: 0;
     top: 0;
     line-height: 50px;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 ul {
+    margin: 0;
     width: 350px;
     display: flex;
     justify-content: space-between;
@@ -50,7 +76,15 @@ li {
 }
 
 ul li a {
-    color: white;
     text-decoration: none;
+    line-height: 50px;
+}
+
+.titleFalse a {
+    color: white;
+}
+
+.titleTrue a {
+    color: rgb(90, 90, 90,0.8);
 }
 </style>

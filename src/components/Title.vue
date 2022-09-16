@@ -21,7 +21,7 @@
 <script setup>
 import { ref } from "vue";
 
-let titleClass = ref("");
+let titleClass = ref("titleFalse");
 
 document.addEventListener("scroll", () => {
     if (

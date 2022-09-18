@@ -181,7 +181,6 @@ const Opentarget = (target) => {
 
 .individual_label_contact_line > div {
     cursor: url(@/assets/cur/x2.cur), auto !important;
-    cursor: pointer;
     width: 40px;
     height: 40px;
     background-size: 100% 100%;

@@ -4,13 +4,13 @@
             <div class="nav">
                 <ul>
                     <li>
-                        <a href>首页</a>
+                        <router-link to='/'>首页</router-link>
                     </li>
                     <li>
-                        <a href>友情链接</a>
+                        <router-link to='../FriendlyLink'>友情链接</router-link>
                     </li>
                     <li>
-                        <a href>关于我</a>
+                        <router-link to='About'>关于我</router-link>
                     </li>
                 </ul>
             </div>

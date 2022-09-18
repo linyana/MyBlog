@@ -1,5 +1,9 @@
 import * as VueRouter from 'vue-router'
+
 import Home from '@/pages/Home.vue';
+import FriendlyLink from '@/pages/FriendlyLink.vue';
+import About from '@/pages/About.vue';
+
 import Article from '@/pages/Article.vue';
 import A1 from '@/pages/articles/1.vue';
 import A2 from '@/pages/articles/2.vue';
@@ -11,6 +15,14 @@ const routes = [
     {
         path: '/',
         component: Home,
+    },
+    {
+        path: '/FriendlyLink',
+        component: FriendlyLink,
+    },
+    {
+        path: '/About',
+        component: About,
     },
     {
         path: '/article',

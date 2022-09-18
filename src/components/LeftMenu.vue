@@ -26,7 +26,7 @@
             </div>
             <div class="individual_label_contact">Contact information</div>
             <div class="individual_label_contact_line">
-                <div class="individual_label_contact_line_QQ"></div>
+                <div @click="Opentarget('http://wpa.qq.com/msgrd?v=3&uin=1439713475&site=qq&menu=yes')" class="individual_label_contact_line_QQ"></div>
                 <div class="individual_label_contact_line_Wechat"></div>
                 <div @click="Opentarget('https://github.com/linyana')" class="individual_label_contact_line_Github"></div>
             </div>

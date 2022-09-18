@@ -7,11 +7,13 @@
         <div class="content">
             <router-view></router-view>
         </div>
+        <Footer></Footer>
     </div>
 </template>
 
 <script setup>
 import Title from "@/components/Title.vue";
+import Footer from "@/components/Footer.vue";
 </script>
 
 <style scoped>

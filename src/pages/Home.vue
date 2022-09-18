@@ -10,11 +10,13 @@
             <LeftMenu></LeftMenu>
             <RightMenu></RightMenu>
         </div>
+        <Footer></Footer>
     </div>
 </template>
 
 <script setup>
 import Title from "@/components/Title.vue";
+import Footer from "@/components/Footer.vue";
 import LeftMenu from "@/components/LeftMenu.vue";
 import RightMenu from "@/components/RightMenu.vue";
 </script>

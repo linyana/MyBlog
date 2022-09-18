@@ -13,13 +13,14 @@
             <p class="introduce">
                 另外 , <a href="https://github.com/linyana">欢迎关注我的github</a> 来共同进步 。
             </p>
-
         </div>
+        <Footer></Footer>
     </div>
 </template>
 
 <script setup>
 import Title from "@/components/Title.vue";
+import Footer from "@/components/Footer.vue";
 </script>
 
 <style scoped>

@@ -1,7 +1,9 @@
 <template>
     <div id="friendlylink">
         <Title></Title>
-        <div class="main"></div>
+        <div class="banner">
+            <div class="banner_name">林衍</div>
+        </div>
         <div class="link_content">
             <h1>友情链接</h1>
             <div class="link_boxes">
@@ -52,18 +54,17 @@ const Opentarget = (target) => {
 </script>
 
 <style scoped>
-.main {
-    position: fixed;
-    z-index: 0;
-    left: 0;
-    top: 0;
-    height: 100vh;
-    width: 100vw;
-    background-image: url("https://s2.loli.net/2022/09/07/ExTiFlG5B8OCovA.webp");
-    background-size: 100% 100%;
+#friendlylink {
+    background-color: rgb(223, 222, 222);
 }
 
-.main::before {
+.banner {
+    width: 100%;
+    height: 400px;
+    background: url("https://s2.loli.net/2022/09/07/p5ezVoQYwk1BXJ6.gif") center center / cover no-repeat;
+}
+
+.banner::before {
     background-image: url(@/assets/home/grid.png);
     content: "";
     position: absolute;
@@ -72,7 +73,16 @@ const Opentarget = (target) => {
     left: 0;
     right: 0;
     z-index: 3;
+    height: 400px;
     background-attachment: fixed;
+}
+
+.banner_name {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 20px;
+    color: white;
 }
 
 .link_content {
@@ -80,9 +90,9 @@ const Opentarget = (target) => {
     width: 850px;
     height: 600px;
     padding: 60px;
-    background-color: rgb(255, 255, 255, 0.8);
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
-    margin: 150px auto;
+    margin: 50px auto;
     box-shadow: 0 0 8px rgb(0, 0, 0, 0.1);
     backdrop-filter: blur(20px);
 }

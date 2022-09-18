@@ -8,7 +8,7 @@
             <div class="img">
                 <img src="https://s2.loli.net/2022/09/18/jCPwbDXz2sacN9i.jpg" alt />
             </div>
-            <h1>个人简介</h1>
+            <h1>林衍</h1>
             <p class="introduce">在校大学生一枚 , 每天的时间都花在前端和云顶上 , 没什么远大理想 , 做自己喜欢的事情就好 。 </p>
             <p class="introduce">
                 另外 , <a href="https://github.com/linyana">欢迎关注我的github</a> 来共同进步 。

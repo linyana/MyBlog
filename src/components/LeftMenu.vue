@@ -27,7 +27,7 @@
             <div class="individual_label_contact">Contact information</div>
             <div class="individual_label_contact_line">
                 <div @click="Opentarget('http://wpa.qq.com/msgrd?v=3&uin=1439713475&site=qq&menu=yes')" class="individual_label_contact_line_QQ"></div>
-                <div class="individual_label_contact_line_Wechat"></div>
+                <div @click="Opentarget('https://s2.loli.net/2022/09/18/WNqR1UjAgYikcXm.png')" class="individual_label_contact_line_Wechat"></div>
                 <div @click="Opentarget('https://github.com/linyana')" class="individual_label_contact_line_Github"></div>
             </div>
         </div>
@@ -75,7 +75,7 @@ const Opentarget = (target) => {
     width: 120px;
     height: 120px;
     border-radius: 60px;
-    background-image: url(@/assets/home/User.jpg);
+    background-image: url(https://s2.loli.net/2022/09/18/jCPwbDXz2sacN9i.jpg);
     background-size: 100% 100%;
     box-shadow: 0 0 20px rgb(0, 0, 0, 0.6);
 }

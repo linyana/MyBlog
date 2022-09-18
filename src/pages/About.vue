@@ -4,6 +4,9 @@
         <div class="banner">
             <div class="banner_name">林衍</div>
         </div>
+        <div class="about_content">
+            <img src="https://s2.loli.net/2022/09/18/jCPwbDXz2sacN9i.jpg" alt="">
+        </div>
     </div>
 </template>
 
@@ -12,6 +15,10 @@ import Title from '@/components/Title.vue';
 </script>
 
 <style scoped>
+#about {
+    background-color: rgb(223, 222, 222);
+}
+
 .banner {
     width: 100%;
     height: 400px;
@@ -37,5 +44,17 @@ import Title from '@/components/Title.vue';
     top: 10px;
     font-size: 20px;
     color: white;
+}
+
+.about_content {
+    position: relative;
+    width: 850px;
+    height: 600px;
+    padding: 60px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin: 50px auto;
+    box-shadow: 0 0 8px rgb(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
 }
 </style>

@@ -105,12 +105,17 @@ h1 {
     margin: 11.5px;
     box-shadow: 0 0 5px rgb(0, 0, 0, 0.3);
     border-radius: 10px;
+    overflow: hidden;
 }
 
 .link_box img {
     width: 100%;
     height: 100%;
     border-radius: 10px;
+}
+
+.link_box:hover .hover_link_box {
+    top: -150px;
 }
 
 .hover_link_box {
@@ -121,6 +126,7 @@ h1 {
     height: 150px;
     border-radius: 10px;
     background-color: rgb(255, 255, 255, 0.6);
+    transition: all 0.8s;
 }
 
 .hover_link_userimg img {

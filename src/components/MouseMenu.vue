@@ -68,7 +68,7 @@ const ShowChildren = (a) => {
 };
 
 const GetImg = (name) => {
-    return new URL(`../../src/assets/images/mouseMenu/${name}`, import.meta.url)
+    return new URL('../../src/assets/images/mouseMenu/' + name, import.meta.url)
         .href;
 };
 </script>

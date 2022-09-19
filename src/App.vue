@@ -2,7 +2,9 @@
     <div @click="isMouseMenu = false;">
         <router-view></router-view>
         <MouseMenu v-show="isMouseMenu" :style="mouseMenuStyle"></MouseMenu>
-        <div class="cover_box" v-show="isMouseMenu"></div>
+        <transition name="cover">
+            <div class="cover_box" v-show="isMouseMenu"></div>
+        </transition>
     </div>
 </template>
 
@@ -32,6 +34,18 @@ window.oncontextmenu = (event) => {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(0, 0, 0, 0.3);
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+.cover-enter-from,.cover-leave-to {
+    opacity: 0;
+}
+
+.cover-leave-from,.cover-enter-to {
+    opacity: 1;
+}
+
+.cover-enter-active,.cover-leave-active {
+    transition: opacity 0.5s;
 }
 </style>

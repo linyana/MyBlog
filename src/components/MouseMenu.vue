@@ -1,20 +1,22 @@
 <template>
-    <div id="mouseMenu">
-        <div class="boxes">
-            <div class="box" v-for="item in boxes" :key="item.id">
-                <img :src="GetImg(item.img)" alt />
-                <div class="circle" @click.stop="ShowChildren(item.isShowChildren)"></div>
-                <div class="child_boxes">
-                    <div
-                        class="child_box"
-                        v-show="item.isShowChildren"
-                        v-for="i in item.children"
-                        :key="i.id"
-                    >{{i.title}}</div>
+    <transition name="box">
+        <div id="mouseMenu">
+            <div class="boxes">
+                <div class="box" v-for="item in boxes" :key="item.id">
+                    <img :src="GetImg(item.img)" alt />
+                    <div class="circle" @click.stop="ShowChildren(item.isShowChildren)"></div>
+                    <div class="child_boxes">
+                        <div
+                            class="child_box"
+                            v-show="item.isShowChildren"
+                            v-for="i in item.children"
+                            :key="i.id"
+                        >{{i.title}}</div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </transition>
 </template>
 
 <script setup>
@@ -66,10 +68,9 @@ const ShowChildren = (a) => {
 };
 
 const GetImg = (name) => {
-    return new URL(`../../src/assets/images/mouseMenu/${name}`,import.meta.url).href;
-}
-
-
+    return new URL(`../../src/assets/images/mouseMenu/${name}`, import.meta.url)
+        .href;
+};
 </script>
 
 <style scoped>
@@ -80,6 +81,7 @@ const GetImg = (name) => {
     top: 0;
     width: 100px;
     height: 260px;
+    transition: all 0.8s;
 }
 
 .box {
@@ -92,6 +94,21 @@ const GetImg = (name) => {
     border-radius: 30px;
     background-color: rgb(154, 154, 154);
     transition: all 0.8s;
+}
+
+.box-enter-from,.box-leave-to {
+    transform: translateY(-50px);
+    opacity: 0;
+}
+
+.box-enter-to,.box-leave-from {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.box-enter-active,.box-leave-active {
+     transition-property: opacity,transform,top,left; 
+     transition-duration: 0.6s,0.6s,0s,0s;
 }
 
 .box img {

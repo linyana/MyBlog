@@ -3,7 +3,7 @@
         <div id="mouseMenu">
             <div class="boxes">
                 <div class="box" v-for="item in boxes" :key="item.id">
-                    <img :src="GetImg(item.img)" alt />
+                    <img :src="getImageUrl(item.img)" alt="图片加载错误" />
                     <div class="circle" @click.stop="ShowChildren(item.isShowChildren)"></div>
                     <div class="child_boxes">
                         <div

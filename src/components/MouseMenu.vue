@@ -23,7 +23,7 @@
 const boxes = [
     {
         id: 0,
-        img: "1",
+        img: "1.png",
         isShowChildren: false,
         children: [
             {
@@ -47,19 +47,19 @@ const boxes = [
     },
     {
         id: 1,
-        img: "2",
+        img: "2.png",
     },
     {
         id: 2,
-        img: "6",
+        img: "6.png",
     },
     {
         id: 3,
-        img: "5",
+        img: "5.png",
     },
     {
         id: 4,
-        img: "4",
+        img: "4.png",
     },
 ];
 
@@ -73,8 +73,9 @@ const GetImg = (name) => {
 };
 
 function getImageUrl(name) {
-  return new URL(`../src/assets/images/mouseMenu/${name}.png`, import.meta.url).href
+    return new URL(`../assets/images/mouseMenu/${name}`, import.meta.url).href;
 }
+
 </script>
 
 <style scoped>

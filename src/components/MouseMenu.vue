@@ -2,8 +2,8 @@
     <div id="mouseMenu">
         <div class="boxes">
             <div class="box" v-for="item in boxes" :key="item.id">
-                <img :src="item.img" alt />
-                <div class="circle" @click.stop="showChildren(item.isShowChildren)"></div>
+                <img :src="GetImg(item.img)" alt />
+                <div class="circle" @click.stop="ShowChildren(item.isShowChildren)"></div>
                 <div class="child_boxes">
                     <div
                         class="child_box"
@@ -21,7 +21,7 @@
 const boxes = [
     {
         id: 0,
-        img: "./src/assets/images/mouseMenu/1.png",
+        img: "1.png",
         isShowChildren: false,
         children: [
             {
@@ -45,26 +45,31 @@ const boxes = [
     },
     {
         id: 1,
-        img: "./src/assets/images/mouseMenu/2.png",
+        img: "2.png",
     },
     {
         id: 2,
-        img: "./src/assets/images/mouseMenu/6.png",
+        img: "6.png",
     },
     {
         id: 3,
-        img: "./src/assets/images/mouseMenu/5.png",
+        img: "5.png",
     },
     {
         id: 4,
-        img: "./src/assets/images/mouseMenu/4.png",
+        img: "4.png",
     },
 ];
 
-const showChildren = (a) => {
+const ShowChildren = (a) => {
     a = true;
-    console.log(a)
 };
+
+const GetImg = (name) => {
+    return new URL(`../../src/assets/images/mouseMenu/${name}`,import.meta.url).href;
+}
+
+
 </script>
 
 <style scoped>
@@ -86,6 +91,7 @@ const showChildren = (a) => {
     margin: 30px auto;
     border-radius: 30px;
     background-color: rgb(154, 154, 154);
+    transition: all 0.8s;
 }
 
 .box img {

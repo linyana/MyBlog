@@ -90,7 +90,13 @@ ul li a {
 
 @media screen and (max-width: 800px) {
     .nav {
-        right: 50px;
+        width: 100%;
     }
+
+    ul {
+        width: 100%;
+        justify-content: space-around;
+    }
+
 }
 </style>

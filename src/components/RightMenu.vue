@@ -273,15 +273,15 @@ const ToTarget = (target) => {
     }
 
     .article .article_card_reserve .article_title {
-        left: -100px;
+        left: -130px;
     }
 
     .article .article_card_reserve .article_date {
-        left: -60px;
+        left: -90px;
     }
 
     .article .article_card_reserve .article_img {
-        left: -100px;
+        left: -130px;
     }
 }
 </style>

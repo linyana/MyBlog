@@ -12,7 +12,7 @@
                         <div class="child_boxes" v-if="item.isShowChildren">
                             <div
                                 class="child_box"
-                                @click.stop="ToTarget(i.src)"
+                                @click.stop="Middleware(i.functionName,i.target)"
                                 v-for="i in item.children"
                                 :key="i.id"
                             >
@@ -41,17 +41,22 @@ const boxes = reactive([
                 id: 0,
                 img: "3.png",
                 title: "首页",
-                src: "/",
+                target: "/",
+                functionName: "ToTarget",
             },
             {
+                id: 1,
                 img: "8.png",
                 title: "友情链接",
-                src: "/FriendlyLink",
+                target: "/FriendlyLink",
+                functionName: "ToTarget",
             },
             {
+                id: 2,
                 img: "7.png",
                 title: "关于我",
-                src: "/About",
+                target: "/About",
+                functionName: "ToTarget",
             },
         ],
     },
@@ -66,6 +71,23 @@ const boxes = reactive([
     {
         id: 3,
         img: "5.png",
+        isShowChildren: false,
+        children: [
+            {
+                id: 0,
+                img: "5.png",
+                title: "保存本页",
+                target: "",
+                functionName: "SaveThisPage",
+            },
+            {
+                id: 1,
+                img: "5.png",
+                title: "保存整站",
+                target: "",
+                functionName: "SaveAllPages",
+            },
+        ],
     },
     {
         id: 4,
@@ -92,6 +114,28 @@ const props = defineProps({
     },
 });
 
+watch(
+    () => props.mouse,
+    (newValue) => {
+        if (newValue) {
+            ReSet();
+        }
+    }
+);
+
+// 中间件
+const Middleware = (name, target) => {
+    if (name === "ToTarget") {
+        ToTarget(target);
+    }
+    if (name === "SaveThisPage") {
+        SaveThisPage();
+    }
+    if (name === "SaveAllPages") {
+        SaveAllPages();
+    }
+};
+
 // 跳转页面
 const router = new useRouter();
 
@@ -101,14 +145,53 @@ const ToTarget = (target) => {
     props.MouseLeft();
 };
 
-watch(
-    () => props.mouse,
-    (newValue) => {
-        if (newValue) {
-            ReSet();
-        }
-    }
-);
+// 保存本页
+
+const fake_click = (obj) => {
+    let ev = document.createEvent("MouseEvents");
+    ev.initMouseEvent(
+        "click",
+        true,
+        false,
+        window,
+        0,
+        0,
+        0,
+        0,
+        0,
+        false,
+        false,
+        false,
+        false,
+        0,
+        null
+    );
+    obj.dispatchEvent(ev);
+};
+
+const export_raw = (name, data) => {
+    let urlObject = window.URL || window.webkitURL || window;
+    let export_blob = new Blob([data]);
+    let save_link = document.createElementNS(
+        "http://www.w3.org/1999/xhtml",
+        "a"
+    );
+    save_link.href = urlObject.createObjectURL(export_blob);
+    save_link.download = name;
+    fake_click(save_link);
+};
+
+const SaveThisPage = () => {
+    const demo = document.getElementsByTagName("html")[0].outerHTML;
+    export_raw("Demo.html", demo);
+};
+
+// 保存整站
+const SaveAllPages = () => {
+    window.open(
+        "https://github.com/linyana/MyBlog/archive/refs/heads/master.zip"
+    );
+};
 </script>
 
 <style scoped>
@@ -172,7 +255,7 @@ watch(
     position: absolute;
     left: 112px;
     top: 0;
-    transform: translateY(calc(-50% + 24px));
+    transform: translateY(calc(-50% + 26px));
 }
 
 .child_box {

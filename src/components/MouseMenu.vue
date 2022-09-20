@@ -76,6 +76,22 @@ const boxes = reactive([
     {
         id: 2,
         img: "6.png",
+        children: [
+            {
+                id: 0,
+                img: "19.png",
+                title: "刷新页面",
+                target: "",
+                functionName: "Reload",
+            },
+            {
+                id: 1,
+                img: "18.png",
+                title: "关闭退出",
+                target: "",
+                functionName: "CloseThisPage",
+            },
+        ],
     },
     {
         id: 3,
@@ -169,9 +185,15 @@ const Middleware = (name, target) => {
     if (name === "OpenTarget") {
         OpenTarget(target);
     }
-    if(name === "BackToTop") {
+    if (name === "BackToTop") {
         BackToTop();
         ReSet();
+    }
+    if (name === "CloseThisPage") {
+        CloseThisPage();
+    }
+    if (name === "Reload") {
+        Reload();
     }
 };
 
@@ -244,6 +266,19 @@ const OpenTarget = (target) => {
 const BackToTop = () => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
+};
+
+// 关闭本页
+
+const CloseThisPage = () => {
+    window.open("about:blank", "_self");
+    window.close();
+};
+
+// 刷新本页
+
+const Reload = () => {
+    location.reload();
 };
 </script>
 

@@ -24,7 +24,8 @@ import Footer from "@/components/Footer.vue";
 .banner {
     width: 100%;
     height: 400px;
-    background: url("https://s2.loli.net/2022/09/07/p5ezVoQYwk1BXJ6.gif") center center / cover no-repeat;
+    background: url("https://s2.loli.net/2022/09/07/p5ezVoQYwk1BXJ6.gif") center
+        center / cover no-repeat;
 }
 
 .banner::before {
@@ -55,4 +56,10 @@ import Footer from "@/components/Footer.vue";
     margin: auto;
 }
 
+
+@media screen and (max-width: 800px){
+    .content {
+        width: 100%;
+    }
+}
 </style>

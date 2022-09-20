@@ -22,3 +22,15 @@
     line-height: 1.5rem;
     color: rgb(78, 77, 77);
 }
+
+@media screen and (max-width: 800px) {
+    .right_content {
+        display: none;
+    }
+
+    .left_content {
+        width: 100%;
+        border-radius: 0;
+        margin: 0;
+    }
+}

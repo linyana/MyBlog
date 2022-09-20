@@ -75,14 +75,14 @@ const boxes = reactive([
         children: [
             {
                 id: 0,
-                img: "5.png",
+                img: "13.png",
                 title: "保存本页",
                 target: "",
                 functionName: "SaveThisPage",
             },
             {
                 id: 1,
-                img: "5.png",
+                img: "12.png",
                 title: "保存整站",
                 target: "",
                 functionName: "SaveAllPages",
@@ -92,6 +92,29 @@ const boxes = reactive([
     {
         id: 4,
         img: "1.png",
+        children: [
+            {
+                id: 0,
+                img: "10.png",
+                title: "QQ",
+                target: "http://wpa.qq.com/msgrd?v=3&uin=1439713475&site=qq&menu=yes",
+                functionName: "OpenTarget",
+            },
+            {
+                id: 1,
+                img: "11.png",
+                title: "WeChat",
+                target: "https://s2.loli.net/2022/09/18/WNqR1UjAgYikcXm.png",
+                functionName: "OpenTarget",
+            },
+            {
+                id: 2,
+                img: "9.png",
+                title: "Github",
+                target: "https://github.com/linyana",
+                functionName: "OpenTarget",
+            },
+        ],
     },
 ]);
 
@@ -133,6 +156,9 @@ const Middleware = (name, target) => {
     }
     if (name === "SaveAllPages") {
         SaveAllPages();
+    }
+    if (name === "OpenTarget") {
+        OpenTarget(target);
     }
 };
 
@@ -187,10 +213,17 @@ const SaveThisPage = () => {
 };
 
 // 保存整站
+
 const SaveAllPages = () => {
     window.open(
         "https://github.com/linyana/MyBlog/archive/refs/heads/master.zip"
     );
+};
+
+// 打开页面(联系方式)
+
+const OpenTarget = (target) => {
+    window.open(target);
 };
 </script>
 

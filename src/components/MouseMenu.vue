@@ -62,7 +62,16 @@ const boxes = reactive([
     },
     {
         id: 1,
-        img: "2.png",
+        img: "16.png",
+        children: [
+            {
+                id: 0,
+                img: "15.png",
+                title: "回到顶部",
+                target: "/",
+                functionName: "BackToTop",
+            },
+        ],
     },
     {
         id: 2,
@@ -160,6 +169,10 @@ const Middleware = (name, target) => {
     if (name === "OpenTarget") {
         OpenTarget(target);
     }
+    if(name === "BackToTop") {
+        BackToTop();
+        ReSet();
+    }
 };
 
 // 跳转页面
@@ -224,6 +237,13 @@ const SaveAllPages = () => {
 
 const OpenTarget = (target) => {
     window.open(target);
+};
+
+// 回到顶部
+
+const BackToTop = () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 };
 </script>
 

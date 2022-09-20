@@ -63,7 +63,8 @@ const Opentarget = (target) => {
 .banner {
     width: 100%;
     height: 400px;
-    background: url("https://s2.loli.net/2022/09/07/p5ezVoQYwk1BXJ6.gif") center center / cover no-repeat;
+    background: url("https://s2.loli.net/2022/09/07/p5ezVoQYwk1BXJ6.gif") center
+        center / cover no-repeat;
 }
 
 .banner::before {
@@ -169,6 +170,12 @@ h1 {
         border-radius: 0;
         padding: 40px;
         margin: 0;
+    }
+
+    .link_boxes {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 }
 </style>

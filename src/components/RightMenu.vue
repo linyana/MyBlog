@@ -244,13 +244,13 @@ const ToTarget = (target) => {
     }
 
     .article .article_card .article_card_right {
-        -webkit-clip-path: polygon(40% 0, 100% 0, 100% 100%, 20% 100%);
-        clip-path: polygon(40% 0, 100% 0, 100% 100%, 20% 100%);
+        -webkit-clip-path: polygon(60% 0, 100% 0, 100% 100%, 60% 100%);
+        clip-path: polygon(60% 0, 100% 0, 100% 100%, 60% 100%);
     }
 
     .article .article_card_reserve .article_card_right {
-        -webkit-clip-path: polygon(0 0, 60% 0, 80% 100%, 0 100%);
-        clip-path: polygon(0 0, 60% 0, 80% 100%, 0 100%);
+        -webkit-clip-path: polygon(0 0, 40% 0, 40% 100%, 0 100%);
+        clip-path: polygon(0 0, 40% 0, 40% 100%, 0 100%);
     }
 
     .article .article_card {
@@ -261,6 +261,7 @@ const ToTarget = (target) => {
 
     .article_title {
         left: 30px;
+        font-size: 5vw;
     }
 
     .article_date {
@@ -269,6 +270,18 @@ const ToTarget = (target) => {
 
     .article_img {
         left: 30px;
+    }
+
+    .article .article_card_reserve .article_title {
+        left: -100px;
+    }
+
+    .article .article_card_reserve .article_date {
+        left: -60px;
+    }
+
+    .article .article_card_reserve .article_img {
+        left: -100px;
     }
 }
 </style>

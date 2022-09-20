@@ -83,4 +83,13 @@ p.introduce {
     color: rgb(104, 103, 103);
     font-size: 18px;
 }
+
+@media screen and (max-width: 800px) {
+    .about_content {
+        width: calc(100% - 80px);
+        border-radius: 0;
+        padding: 40px;
+        margin: 0;
+    }
+}
 </style>

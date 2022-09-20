@@ -162,4 +162,13 @@ h1 {
     line-height: 95px;
     font-size: 21px;
 }
+
+@media screen and (max-width: 800px) {
+    .link_content {
+        width: calc(100% - 80px);
+        border-radius: 0;
+        padding: 40px;
+        margin: 0;
+    }
+}
 </style>

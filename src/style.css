@@ -34,6 +34,12 @@ button:not(:disabled) {
     margin: auto;
 }
 
+@media screen and (max-width: 800px) {
+    .container {
+        width: 100%;
+    }
+}
+
 /* 滚动条 */
 ::-webkit-scrollbar-thumb:horizontal {
     /*水平滚动条的样式*/

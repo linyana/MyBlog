@@ -4,13 +4,13 @@
             <div class="nav">
                 <ul>
                     <li>
-                        <router-link to='/'>首页</router-link>
+                        <router-link to="/">首页</router-link>
                     </li>
                     <li>
-                        <router-link to='../FriendlyLink'>友情链接</router-link>
+                        <router-link to="../FriendlyLink">友情链接</router-link>
                     </li>
                     <li>
-                        <router-link to='About'>关于我</router-link>
+                        <router-link to="About">关于我</router-link>
                     </li>
                 </ul>
             </div>
@@ -49,7 +49,7 @@ document.addEventListener("scroll", () => {
 
 .titleTrue {
     background-color: rgba(226, 229, 229);
-    color: black!important;
+    color: black !important;
 }
 
 .titleFalse {
@@ -85,6 +85,12 @@ ul li a {
 }
 
 .titleTrue a {
-    color: rgb(90, 90, 90,0.8);
+    color: rgb(90, 90, 90, 0.8);
+}
+
+@media screen and (max-width: 800px) {
+    .nav {
+        right: 50px;
+    }
 }
 </style>

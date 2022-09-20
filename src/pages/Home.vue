@@ -29,8 +29,7 @@ import RightMenu from "@/components/RightMenu.vue";
     top: 0;
     height: 100vh;
     width: 100vw;
-    background-image: url("https://s2.loli.net/2022/09/07/ExTiFlG5B8OCovA.webp");
-    background-size: 100% 100%;
+    background: url("https://s2.loli.net/2022/09/07/ExTiFlG5B8OCovA.webp") center center / cover no-repeat;
 }
 
 .main::before {
@@ -71,5 +70,11 @@ import RightMenu from "@/components/RightMenu.vue";
 .flex {
     display: flex;
     justify-content: space-between;
+}
+
+@media screen and (max-width: 800px){
+    .container {
+        width: 100%;
+    }
 }
 </style>

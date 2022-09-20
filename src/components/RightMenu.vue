@@ -232,4 +232,43 @@ const ToTarget = (target) => {
 .article_card:hover {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
 }
+
+@media screen and (max-width: 800px) {
+    .article .article_card .article_card_left {
+        width: 80%;
+        left: 30%;
+    }
+
+    .article_disctription {
+        display: none;
+    }
+
+    .article .article_card .article_card_right {
+        -webkit-clip-path: polygon(40% 0, 100% 0, 100% 100%, 20% 100%);
+        clip-path: polygon(40% 0, 100% 0, 100% 100%, 20% 100%);
+    }
+
+    .article .article_card_reserve .article_card_right {
+        -webkit-clip-path: polygon(0 0, 60% 0, 80% 100%, 0 100%);
+        clip-path: polygon(0 0, 60% 0, 80% 100%, 0 100%);
+    }
+
+    .article .article_card {
+        width: 90%;
+        height: 200px;
+        margin: 50px auto;
+    }
+
+    .article_title {
+        left: 30px;
+    }
+
+    .article_date {
+        left: 70px;
+    }
+
+    .article_img {
+        left: 30px;
+    }
+}
 </style>

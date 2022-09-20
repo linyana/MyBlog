@@ -197,4 +197,10 @@ const Opentarget = (target) => {
 .individual_label_contact_line_Github {
     background-image: url(@/assets/home/Github.png);
 }
+
+@media screen and (max-width: 800px){
+    #leftmenu {
+        display: none;
+    }
+}
 </style>

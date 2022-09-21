@@ -7,37 +7,55 @@
             <div class="individual_label_position_image"></div>
             <div class="individual_label_position_name">四川</div>
             <div class="individual_label_information">
-                <div class="individual_label_information_box">
+                <div class="individual_label_information_box" :plain="true" @click="open">
                     <div class="individual_label_information_box_name">评论</div>
                     <div class="individual_label_information_box_number">23</div>
                 </div>
-                <div class="individual_label_information_box">
+                <div class="individual_label_information_box" :plain="true" @click="open">
                     <div class="individual_label_information_box_name">文章</div>
                     <div class="individual_label_information_box_number">2</div>
                 </div>
-                <div class="individual_label_information_box">
+                <div class="individual_label_information_box" :plain="true" @click="open">
                     <div class="individual_label_information_box_name">关注</div>
                     <div class="individual_label_information_box_number">56</div>
                 </div>
-                <div class="individual_label_information_box">
+                <div class="individual_label_information_box" :plain="true" @click="open">
                     <div class="individual_label_information_box_name">粉丝</div>
                     <div class="individual_label_information_box_number">7</div>
                 </div>
             </div>
             <div class="individual_label_contact">Contact information</div>
             <div class="individual_label_contact_line">
-                <div @click="Opentarget('http://wpa.qq.com/msgrd?v=3&uin=1439713475&site=qq&menu=yes')" class="individual_label_contact_line_QQ"></div>
-                <div @click="Opentarget('https://s2.loli.net/2022/09/18/WNqR1UjAgYikcXm.png')" class="individual_label_contact_line_Wechat"></div>
-                <div @click="Opentarget('https://github.com/linyana')" class="individual_label_contact_line_Github"></div>
+                <div
+                    @click="Opentarget('http://wpa.qq.com/msgrd?v=3&uin=1439713475&site=qq&menu=yes')"
+                    class="individual_label_contact_line_QQ"
+                ></div>
+                <div
+                    @click="Opentarget('https://s2.loli.net/2022/09/18/WNqR1UjAgYikcXm.png')"
+                    class="individual_label_contact_line_Wechat"
+                ></div>
+                <div
+                    @click="Opentarget('https://github.com/linyana')"
+                    class="individual_label_contact_line_Github"
+                ></div>
             </div>
         </div>
     </div>
 </template>
 
 <script setup>
+import { ElMessage } from "element-plus";
+
 const Opentarget = (target) => {
-     window.open(target);
+    window.open(target);
 };
+
+const open = () => {
+  ElMessage({
+    showClose: true,
+    message: '该功能暂未开放',
+  })
+}
 </script>
 
 <style>
@@ -198,10 +216,9 @@ const Opentarget = (target) => {
     background-image: url(@/assets/home/Github.png);
 }
 
-@media screen and (max-width: 1350px){
+@media screen and (max-width: 1350px) {
     #leftmenu {
         display: none;
     }
 }
-
 </style>

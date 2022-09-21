@@ -254,6 +254,7 @@ const OpenTarget = (target) => {
 const BackToTop = () => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
+    isMouseMenu.value = false;
 };
 
 // 关闭本页

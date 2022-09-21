@@ -308,7 +308,11 @@ const MouseLeft = () => {
     margin: 30px auto;
     border-radius: 30px;
     background-color: rgb(154, 154, 154, 0.9);
-    transition: all 0.8s;
+    transition: all 0.3s;
+}
+
+.box:hover {
+    background-color: rgba(182, 179, 179, 0.9);
 }
 
 .box-enter-from,
@@ -343,6 +347,11 @@ const MouseLeft = () => {
     height: 64px;
     border-radius: 40px;
     border: 3px solid rgb(154, 154, 154, 0.9);
+    transition: all 0.3s;
+}
+
+.circle:hover {
+    border: 3px solid rgba(182, 179, 179, 0.9);
 }
 
 .child_boxes {
@@ -359,6 +368,11 @@ const MouseLeft = () => {
     margin: 8px 0;
     background-color: rgb(154, 154, 154, 0.9);
     border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.child_box:hover {
+    background-color: rgba(182, 179, 179, 0.9);
 }
 
 .sanjiao {

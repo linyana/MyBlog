@@ -51,11 +51,11 @@ const Opentarget = (target) => {
 };
 
 const open = () => {
-  ElMessage({
-    showClose: true,
-    message: '该功能暂未开放',
-  })
-}
+    ElMessage({
+        showClose: true,
+        message: "该功能暂未开放",
+    });
+};
 </script>
 
 <style>
@@ -183,8 +183,30 @@ const open = () => {
     font-size: 1.2em;
     line-height: 40px;
     text-align: center;
-    background-color: rgb(25, 224, 158);
+    background-image: linear-gradient(
+        to right,
+        rgb(25, 224, 158),
+        rgb(25, 224, 158),
+        rgb(20, 184, 129),
+        rgb(25, 224, 158),
+        rgb(25, 224, 158)
+    );
     color: white;
+    background-size: 500%;
+    background-position: 500%;
+}
+
+.individual_label_contact:hover {
+    animation: label 3s linear infinite;
+}
+
+@keyframes label {
+    0% {
+        background-position: 500%;
+    }
+    100% {
+        background-position: 0;
+    }
 }
 
 .individual_label_contact_line {

@@ -1,34 +1,39 @@
 <template>
-    <transition name="box">
-        <div id="mouseMenu">
-            <div class="boxes">
-                <div class="box" v-for="item in boxes" :key="item.id">
-                    <img :src="getImageUrl(item.img)" alt="图片加载错误" />
-                    <div class="circle" @click.stop="ReSet();item.isShowChildren = true;"></div>
-                    <transition name="childBox">
-                        <div class="sanjiao" v-if="item.isShowChildren"></div>
-                    </transition>
-                    <transition name="childBox">
-                        <div class="child_boxes" v-if="item.isShowChildren">
-                            <div
-                                class="child_box"
-                                @click.stop="Middleware(i.functionName,i.target)"
-                                v-for="i in item.children"
-                                :key="i.id"
-                            >
-                                <img :src="getImageUrl(i.img)" alt="图片加载错误" />
-                                <div class="child_box_text">{{i.title}}</div>
+    <div @click="MouseLeft">
+        <transition name="box">
+            <div id="mouseMenu" v-show="isMouseMenu" :style="mouseMenuStyle">
+                <div class="boxes">
+                    <div class="box" v-for="item in boxes" :key="item.id">
+                        <img :src="getImageUrl(item.img)" alt="图片加载错误" />
+                        <div class="circle" @click.stop="ReSet();item.isShowChildren = true;"></div>
+                        <transition name="childBox">
+                            <div class="sanjiao" v-if="item.isShowChildren"></div>
+                        </transition>
+                        <transition name="childBox">
+                            <div class="child_boxes" v-if="item.isShowChildren">
+                                <div
+                                    class="child_box"
+                                    @click.stop="Middleware(i.functionName,i.target)"
+                                    v-for="i in item.children"
+                                    :key="i.id"
+                                >
+                                    <img :src="getImageUrl(i.img)" alt="图片加载错误" />
+                                    <div class="child_box_text">{{i.title}}</div>
+                                </div>
                             </div>
-                        </div>
-                    </transition>
+                        </transition>
+                    </div>
                 </div>
             </div>
-        </div>
-    </transition>
+        </transition>
+        <transition name="cover">
+            <div class="cover_box" v-show="isMouseMenu"></div>
+        </transition>
+    </div>
 </template>
 
 <script setup>
-import { reactive, watch } from "vue";
+import { reactive, watch, ref } from "vue";
 import { useRouter } from "vue-router";
 
 const boxes = reactive([
@@ -154,23 +159,6 @@ const ReSet = () => {
     }
 };
 
-const props = defineProps({
-    mouse: Boolean,
-    MouseLeft: {
-        type: Function,
-        required: true,
-    },
-});
-
-watch(
-    () => props.mouse,
-    (newValue) => {
-        if (newValue) {
-            ReSet();
-        }
-    }
-);
-
 // 中间件
 const Middleware = (name, target) => {
     if (name === "ToTarget") {
@@ -203,7 +191,7 @@ const router = new useRouter();
 const ToTarget = (target) => {
     router.push(target);
     ReSet();
-    props.MouseLeft();
+    MouseLeft();
 };
 
 // 保存本页
@@ -279,6 +267,24 @@ const CloseThisPage = () => {
 
 const Reload = () => {
     location.reload();
+};
+
+// 鼠标
+let isMouseMenu = ref(false);
+
+let mouseMenuStyle = ref("");
+
+window.oncontextmenu = (event) => {
+    event.preventDefault();
+    mouseMenuStyle.value = `left: ${event.clientX + 25}px;top: ${
+        event.clientY - 100
+    }px`;
+    isMouseMenu.value = true;
+};
+
+const MouseLeft = () => {
+    isMouseMenu.value = false;
+    ReSet();
 };
 </script>
 
@@ -394,5 +400,30 @@ const Reload = () => {
 .childBox-enter-active,
 .childBox-leave-active {
     transition: all 0.8s;
+}
+
+.cover_box {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999999;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+.cover-enter-from,
+.cover-leave-to {
+    opacity: 0;
+}
+
+.cover-leave-from,
+.cover-enter-to {
+    opacity: 1;
+}
+
+.cover-enter-active,
+.cover-leave-active {
+    transition: opacity 0.5s;
 }
 </style>

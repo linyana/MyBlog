@@ -233,10 +233,21 @@ const ToTarget = (target) => {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
 }
 
+@media screen and (max-width: 1350px) {
+    .article .article_card {
+        margin: 50px auto;
+    }
+}
+
 @media screen and (max-width: 800px) {
     .article .article_card .article_card_left {
         width: 80%;
         left: 30%;
+    }
+
+    .article .article_card_reserve .article_card_left {
+        width: 80%;
+        left: 20%;
     }
 
     .article_disctription {

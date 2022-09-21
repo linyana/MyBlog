@@ -198,9 +198,10 @@ const Opentarget = (target) => {
     background-image: url(@/assets/home/Github.png);
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 1350px){
     #leftmenu {
         display: none;
     }
 }
+
 </style>

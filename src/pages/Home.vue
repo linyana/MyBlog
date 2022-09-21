@@ -29,7 +29,8 @@ import RightMenu from "@/components/RightMenu.vue";
     top: 0;
     height: 100vh;
     width: 100vw;
-    background: url("https://s2.loli.net/2022/09/07/ExTiFlG5B8OCovA.webp") center center / cover no-repeat;
+    background: url("https://s2.loli.net/2022/09/07/ExTiFlG5B8OCovA.webp")
+        center center / cover no-repeat;
 }
 
 .main::before {
@@ -72,7 +73,16 @@ import RightMenu from "@/components/RightMenu.vue";
     justify-content: space-between;
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 1350px) {
+    .container {
+        width: 100%;
+    }
+    .flex {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 800px) {
     .container {
         width: 100%;
     }

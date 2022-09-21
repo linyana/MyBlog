@@ -88,7 +88,7 @@ ul li a {
     color: rgb(90, 90, 90, 0.8);
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1350px) {
     .nav {
         width: 100%;
     }
@@ -98,5 +98,8 @@ ul li a {
         justify-content: space-around;
     }
 
+    .container {
+        width: 100%;
+    }
 }
 </style>

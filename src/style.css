@@ -10,6 +10,7 @@ html {
     height: 100%;
     cursor: url(@/assets/cur/x1.cur), auto;
     scroll-behavior: smooth;
+    min-width: 390px;
 }
 
 [type=button]:not(:disabled),
